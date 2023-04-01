@@ -2,3 +2,5 @@
 
 require './lib/chessboard'
 require './lib/knight'
+
+chess = ChessBoard.new
