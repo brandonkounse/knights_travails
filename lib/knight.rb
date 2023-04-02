@@ -4,19 +4,19 @@
 class Knight
   attr_reader :movement
 
-  def initialize; end
-
-  def move(pos_from = [0, 0], pos_to = [0, 0])
-    # makes sure destination is within board space
-    destination_valid?(pos_to)
-
-    return if pos_from == pos_to
-
+  def initialize
+    @movement = []
   end
 
-  def destination_valid?(pos_to = [])
-    raise ArgumentError, "#{pos_to} is invalid square" if pos_to.any? { |ele| ele.negative? || ele > 7 }
+  def move(pos_from = [0, 0], pos_to = [0, 0])
+    return if pos_from == pos_to
+  end
 
-    true
+  def move_valid?(pos_to = [])
+    if pos_to.any? { |ele| ele.negative? || ele > 7 }
+      false
+    else
+      true
+    end
   end
 end
