@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require './lib/chessboard'
-require './lib/knight'
+require './lib/chess'
 
-chess = ChessBoard.new
+chess = Chess.new
